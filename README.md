@@ -62,4 +62,18 @@ Input variables:
 <br/>
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')<br/>
 
+### Data Analysis and Preparation
 
+1. No null values present in the data.
+2. The target variable is skewed towards 'no' 88.73% ofof the custimer did not get a term deposit subscription after the campaign.
+3. Numerical Variables
+	- 96% of rows for the pdays column has the same value. Therefore, this column can be dropped.
+	- 86.34% of rows for the previous column has the same value. Therefore, this column can be dropped.
+	- 1.13% of rows are outliers for the column age and about 5.84% of rows are outliers for the column campaign. I am not going to drop those rows as the dataset contains only about 41K rows.
+	- duration column can be dropped based on the description of the data.
+ 4.Categorical Variables
+	- The count plot and group by plots for all categorical variables look fine
+	- The customer is more likely to subscribe to the term deposit when the outcome of the previous campaign is successful (poutcome column )is successful.
+	- Certain months lead to success as opposed to others
+	- Day of the week, personal loan and housing by themselves don't affect the outcome
+ 
