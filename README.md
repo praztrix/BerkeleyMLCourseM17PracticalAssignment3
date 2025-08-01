@@ -138,6 +138,7 @@ Evaluation metrics are quite similar with and without GridSearchCV except for th
 2. Training accuracy for KNN has gone up by 9 percent.
 3. Training times would be higher for GridSearchCV for obvious reasons.
 
-In terms of next steps, I would like to understand the Neural Networks model in detail that is presented in the research paper.
 
 I want to point out that I did not instantiate SVC with probability set to True for grid search to save compute cycles. It was taking too long to run the grid search with that option.
+
+In terms of next steps, I would like to understand the Neural Networks model in detail that is presented in the research paper.
