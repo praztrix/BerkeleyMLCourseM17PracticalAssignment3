@@ -23,7 +23,7 @@ The data is collected from the phone marketing campaign conducted by a Portugues
 
 Input variables:
 
-<b>Bank client data<b/><br/>
+<b>Bank client data</b><br/>
 
 1 - age (numeric)<br/>
 2 - job : type of job (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')<br/>
