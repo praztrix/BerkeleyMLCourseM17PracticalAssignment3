@@ -76,4 +76,28 @@ Input variables:
 	- The customer is more likely to subscribe to the term deposit when the outcome of the previous campaign is successful (poutcome column )is successful.
 	- Certain months lead to success as opposed to others
 	- Day of the week, personal loan and housing by themselves don't affect the outcome
- 
+5. Apply One Hot Encoding to all categorical Variables and StandardScaler to all numerical variables. 
+
+
+### Modeling - Compare Classifiers
+
+1. Build four classification models using Logistic Regression, Decision Trees, K nearest Neighbors and Support Vector Classifier.
+2. Calculate confusion matrix to understand true positive, false positive, true negative and falsi negative. Calculate precision and recall.
+3. Since the primary business objective is to increase successful sales of long-term deposits, we should try to optimize recall.
+	- False Positives (predicting a sale when there isn't one): The costs are relatively low, primarily involving some lost effort.
+	- False Negatives (predicting no sale when there would have been one): This represents a lost opportunity to acquire a long-term deposit. So we should try to minimize False Negatives.
+4. Optimizing recall means focusing on predicting True positives accurately and minimizing False negatives.
+
+#### Evaluation Metrics for different Classifiers
+
+| Model               |   Train Time |   Train Accuracy |   Test Accuracy |   Recall |   Precision |
+|:--------------------|-------------:|-----------------:|----------------:|---------:|------------:|
+| Logistic Regression |         0.1  |             0.9  |            0.9  |     0.21 |        0.7  |
+| Decision Trees      |         0.39 |             1    |            0.84 |     0.34 |        0.31 |
+| KNN                 |         0.05 |             0.91 |            0.9  |     0.3  |        0.58 |
+| SVC                 |       235.74 |             0.9  |            0.9  |     0.23 |        0.72 |
+
+
+
+Decision Tree model has the highest recall but it is also showing high training accuracy which may lead to overfitting. This explains lower test accuracy for Decision Trees as compared to others. recall values are low in general and it can be explained by the imbalanced data set where the 'yes' class is only about 11%
+
