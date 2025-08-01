@@ -92,11 +92,10 @@ Input variables:
 
 | Model               |   Train Time |   Train Accuracy |   Test Accuracy |   Recall |   Precision |
 |:--------------------|-------------:|-----------------:|----------------:|---------:|------------:|
-| Logistic Regression |         0.1  |             0.9  |            0.9  |     0.21 |        0.7  |
-| Decision Trees      |         0.39 |             1    |            0.84 |     0.34 |        0.31 |
+| Logistic Regression |         0.09 |             0.9  |            0.9  |     0.21 |        0.7  |
+| Decision Trees      |         0.39 |             1    |            0.84 |     0.33 |        0.31 |
 | KNN                 |         0.05 |             0.91 |            0.9  |     0.3  |        0.58 |
-| SVC                 |       235.74 |             0.9  |            0.9  |     0.23 |        0.72 |
-
+| SVC                 |       159.26 |             0.9  |            0.9  |     0.23 |        0.72 |
 
 
 Decision Tree model has the highest recall but it is also showing high training accuracy which may lead to overfitting. This explains lower test accuracy for Decision Trees as compared to others. recall values are low in general and it can be explained by the imbalanced data set where the 'yes' class is only about 11%
@@ -129,16 +128,16 @@ Only one parameter is chosen for SVC due to the compute intensive nature of SVC.
 
 | Grid Search CV Model   |   Train Time |   Train Accuracy |   Test Accuracy |   Recall |   Precision |
 |:-----------------------|-------------:|-----------------:|----------------:|---------:|------------:|
-| Logistic Regression    |         6.61 |             0.9  |            0.9  |     0.22 |        0.69 |
-| Decision Trees         |         2.14 |             1    |            0.85 |     0.33 |        0.32 |
-| KNN                    |        30.19 |             1    |            0.89 |     0.3  |        0.52 |
-| SVC                    |        77.3  |             0.91 |            0.9  |     0.24 |        0.68 |
+| Logistic Regression    |         6.9  |             0.9  |            0.9  |     0.22 |        0.69 |
+| Decision Trees         |         2.23 |             1    |            0.84 |     0.34 |        0.32 |
+| KNN                    |        30.69 |             1    |            0.89 |     0.3  |        0.52 |
+| SVC                    |        80.54 |             0.91 |            0.9  |     0.24 |        0.68 |
 
 
 Evaluation metrics are quite similar with and without GridSearchCV except for the following:
 1. KNN & SVC precision metrics have reduced.
 2. Training accuracy for KNN has gone up by 9 percent.
-3. Training times would be higher for GridSearchCV for obvious reasons. GridSearchCV SVC training time is faster than simple SVC training. I observed this pattern only in the latest run. I am running my Notebook on a new MacBook Pro with GPUs. When I ran this notebook on Colab (with pro subscription), it took longer than my macbook. I cannot explain this and will look into it.  
+3. Training times would be higher for GridSearchCV for obvious reasons. GridSearchCV SVC training time is faster than simple SVC training. I observed this pattern only in the latest run. I am running my Notebook on a new MacBook Pro with GPUs. When I ran this notebook on Colab (with a pro subscription), it took longer than my macbook. I cannot explain this and will look into it.  
 
 
 I want to point out that I did not instantiate SVC with probability set to True for grid search to save compute cycles. It was taking too long to run the grid search with that option.
