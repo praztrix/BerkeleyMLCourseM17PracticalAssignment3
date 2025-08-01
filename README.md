@@ -8,11 +8,11 @@
 3. data/bank-additional-names.txt - information about the data set
 4. data/bank-additional.csv - contains subset of bank marketing campaign data
 4. PortugueseBankMarketingCampaign.ipynb - Jupyter notebook for bank marketing campaign modeling
-5. prac3app_utils.py - utilility functions used in the notebook
+5. prac3app_utils.py - utility functions used in the notebook
 
 ### Business Understanding
 
-The data is collected from the phone marketing campaign conducted by a Portuguese banking institution. The goal of the campaign is to sell a term term to customers. The business goal is to model the data to successfully predict that a client will subscribe to a term deposit by comparing the following classificatin models:
+The data is collected from the phone marketing campaign conducted by a Portuguese banking institution. The goal of the campaign is to sell a term deposit to customers. The business goal is to model the data to successfully predict that a client will subscribe to a term deposit by comparing the following classification models:
 
 1. Logistic Regression
 2. K Nearest Neighbor
@@ -65,7 +65,7 @@ Input variables:
 ### Data Analysis and Preparation
 
 1. No null values present in the data.
-2. The target variable is skewed towards 'no' 88.73% ofof the custimer did not get a term deposit subscription after the campaign.
+2. The target variable is skewed towards 'no'.  88.73% of the customers did not get a term deposit subscription after the campaign.
 3. Numerical Variables
 	- 96% of rows for the pdays column has the same value. Therefore, this column can be dropped.
 	- 86.34% of rows for the previous column has the same value. Therefore, this column can be dropped.
@@ -82,7 +82,7 @@ Input variables:
 ### Modeling - Compare Classifiers
 
 1. Build four classification models using Logistic Regression, Decision Trees, K nearest Neighbors and Support Vector Classifier.
-2. Calculate confusion matrix to understand true positive, false positive, true negative and falsi negative. Calculate precision and recall.
+2. Calculate confusion matrix to understand true positive, false positive, true negative and false negative. Calculate precision and recall.
 3. Since the primary business objective is to increase successful sales of long-term deposits, we should try to optimize recall.
 	- False Positives (predicting a sale when there isn't one): The costs are relatively low, primarily involving some lost effort.
 	- False Negatives (predicting no sale when there would have been one): This represents a lost opportunity to acquire a long-term deposit. So we should try to minimize False Negatives.
@@ -113,14 +113,14 @@ Let's use GridSearchCV to tune hyperparameters.
     - penalty 
 2. Decision Tree Hyperpatameters
    - max depth
-    - ceriterion
+   - criterion
 4. KNearest Neighbors
-    - n_neighbors
-    - weights
+   - n_neighbors
+   - weights
 6. SVC (probability is not set to True as it was taking too long to run the grid search)
-    - kernel
+   - kernel
 
-Only one parameter is chosen for SVC due to compute intensive nature of SVC.
+Only one parameter is chosen for SVC due to the compute intensive nature of SVC.
 
 
 #### Evaluation Metrics for Best Models after GridSearchCV of Classifiers
