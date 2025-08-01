@@ -138,7 +138,7 @@ Only one parameter is chosen for SVC due to the compute intensive nature of SVC.
 Evaluation metrics are quite similar with and without GridSearchCV except for the following:
 1. KNN & SVC precision metrics have reduced.
 2. Training accuracy for KNN has gone up by 9 percent.
-3. Training times would be higher for GridSearchCV for obvious reasons.
+3. Training times would be higher for GridSearchCV for obvious reasons. GridSearchCV SVC training time is faster than simple SVC training. I observed this pattern only in the latest run. I am running my Notebook on a new MacBook Pro with GPUs. When I ran this notebook on Colab (with pro subscription), it took longer than my macbook. I cannot explain this and will look into it.  
 
 
 I want to point out that I did not instantiate SVC with probability set to True for grid search to save compute cycles. It was taking too long to run the grid search with that option.
