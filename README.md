@@ -120,7 +120,7 @@ Let's use GridSearchCV to tune hyperparameters.
 6. SVC (probability is not set to True as it was taking too long to run the grid search)
    - kernel
 
-Scoring parameter is set to optimize for recall.
+Scoring parameter is set to optimize recall.
 
 Only one parameter is chosen for SVC due to the compute intensive nature of SVC.
 
