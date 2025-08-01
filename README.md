@@ -71,7 +71,7 @@ Input variables:
 	- 86.34% of rows for the previous column has the same value. Therefore, this column can be dropped.
 	- 1.13% of rows are outliers for the column age and about 5.84% of rows are outliers for the column campaign. I am not going to drop those rows as the dataset contains only about 41K rows.
 	- duration column can be dropped based on the description of the data.
-4.Categorical Variables
+4. Categorical Variables
 	- The count plot and group by plots for all categorical variables look fine
 	- The customer is more likely to subscribe to the term deposit when the outcome of the previous campaign is successful (poutcome column )is successful.
 	- Certain months lead to success as opposed to others
